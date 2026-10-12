@@ -7,7 +7,7 @@ the pixi-sbom wheel of the same version from PyPI, so nothing is compiled.
 ```yaml
 repos:
   - repo: https://github.com/aesir-oss/pixi-sbom-pre-commit
-    rev: v1.13.0
+    rev: v1.13.1
     hooks:
       # Write sbom.cdx.json next to the lockfile whenever a lockfile changes.
       - id: pixi-sbom
@@ -20,4 +20,4 @@ The hooks run when `pixi.lock`, `uv.lock`, `pylock.toml`, `poetry.lock`, `pdm.lo
 reading the lockfile the way `pixi-sbom` finds it from the repository root; `args:` passes any other flag
 (`--scan .` for a monorepo, `--format spdx`). A rerun that would change nothing but the document's timestamp leaves
 the file alone, so the hook only fails when the SBOM really changed. See the
-[pre-commit section of the docs](https://aesir-oss.github.io/pixi-ext-contrib/latest/ci-recipes/#pre-commit).
+[pre-commit section of the docs](https://aesir-oss.github.io/pixi-ext-contrib/pixi-sbom/latest/ci-recipes/#pre-commit).
