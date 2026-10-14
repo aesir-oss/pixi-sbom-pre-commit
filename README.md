@@ -7,7 +7,7 @@ the pixi-sbom wheel of the same version from PyPI, so nothing is compiled.
 ```yaml
 repos:
   - repo: https://github.com/aesir-oss/pixi-sbom-pre-commit
-    rev: v1.13.2
+    rev: v1.14.0
     hooks:
       # Write sbom.cdx.json next to the lockfile whenever a lockfile changes.
       - id: pixi-sbom
